@@ -4,7 +4,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { ApiService } from './../../shared/api.service';
-import * as moment from 'moment';
+import moment from 'moment';
 import * as $ from 'jquery';
 import { FormGroupDirective, FormControl, FormBuilder, FormGroup, Validators, NgForm, NG_VALIDATORS, Validator, ValidatorFn, PatternValidator } from '@angular/forms';
 import { Directive } from '@angular/core';
