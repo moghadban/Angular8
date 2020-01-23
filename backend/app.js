@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 
 // Setting up static directory
-app.use(express.static(path.join(__dirname, 'dist/moghadban')));
+app.use(express.static(path.join(__dirname, 'moghadban')));
 
 
 // RESTful API root
@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/moghadban/index.html'));
+  res.sendFile(path.join(__dirname, 'moghadban/index.html'));
 });
 
 // error handler
