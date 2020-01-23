@@ -1,0 +1,45 @@
+{
+  "name": "Edit",
+  "plural": "/edit-entry",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+  "mongodb": {
+      "tableName": "Add"
+    },
+    "validateUpsert": true
+  },
+  "http": {
+    "path": "/edit-entry"
+  },
+  "properties": {
+    "_id": {
+      "type": "string",
+      "id": true
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "dob": {
+      "type": "date",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,100 @@
+<!-- Title group  -->
+<div class="title-group">
+  <h1 class="mat-h1">Edit Entry</h1>
+  <mat-divider fxFlex="1 0"></mat-divider>
+</div>
+<!-- Form -->
+<div class="inner-wrapper">
+  <form [formGroup]="entryForm" (ngSubmit)="UpdateEntryForm()" #resetEntryForm="ngForm" novalidate>
+    <!-- Left block -->
+    <mat-card>
+      <div class="controlers-wrapper">
+        <!-- First Name -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="First Name" formControlName="first_name" maxlength="30" minlength="2" (input)="onFirstNameChange($event)">
+          <mat-error *ngIf="handleError('first_name', 'required')">
+            You must provide a<strong>first name</strong>
+          </mat-error>
+          <mat-error *ngIf="handleError('first_name','maxlength')">
+            First Name cannot be more than 30 characters long.
+          </mat-error>
+          <mat-error *ngIf="this.entryForm.controls['first_name'].hasError('minlength')">
+            First Name must be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+        <!-- Last Name -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Last Name" formControlName="last_name" maxlength="30" minlength="2" (input)="onLastNameChange($event)">
+          <mat-error *ngIf="handleError('last_name', 'required')">
+            Last Name is required
+          </mat-error>
+          <mat-error *ngIf="handleError('last_name','maxlength')">
+            First Name cannot be more than 30 characters long.
+          </mat-error>
+          <mat-error *ngIf="this.entryForm.controls['last_name'].hasError('minlength')">
+            First Name must be at least 2 characters long.
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Email -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" formControlName="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$" (keyup)="onEmailKeyup($event)">
+          <mat-error *ngIf="handleError('email', 'required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="this.entryForm.controls['email'].hasError('pattern')">
+            Invalid Email format.
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+    </mat-card>
+    <!-- Right block -->
+    <mat-card>
+      <div class="controlers-wrapper">
+
+        <!-- Phone -->
+        <mat-form-field class="example-full-width">
+          <input type="tel" matInput placeholder="Phone Number XXX-XXX-XXXX" formControlName="phone" maxlength="12" minlength="12" pattern="\d{3}[\-]\d{3}[\-]\d{4}" (keypress)="onPhoneKeypress($event)" digitOnly>
+          <mat-error *ngIf="handleError('phone', 'required')">
+            Phone Number is required
+          </mat-error>
+          <mat-error *ngIf="this.entryForm.controls['phone'].hasError('pattern')">
+            Invalid pattern, please use XXX-XXX-XXXX with dashes.
+          </mat-error>
+
+          <mat-error *ngIf="handleError('phone', 'minlength')">
+            Phone Number must be 12 characters long formatted XXX-XXX-XXXX with dashes.
+          </mat-error>
+
+
+        </mat-form-field>
+        <!-- Date of birth -->
+
+        <mat-form-field class="example-full-width date-picker-min-max-example">
+          <input matInput minlength="8" maxlength="10" id="dob" formControlName="dob" [min]="minDate" [max]="maxDate" [matDatepicker]="picker" (keypress)="onDateKeypress($event)" placeholder="Date of Birth M/d/yyyy or MM/d/yyyy or M/dd/yyyy">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="this.entryForm.controls['dob'].hasError('required')">
+            Required or invalid pattern.
+          </mat-error>
+          <mat-error *ngIf="handleError('dob', 'maxlength')">
+            Date of birth must be 10 characters long maximum
+          </mat-error>
+          <mat-error *ngIf="handleError('dob', 'minlength')">
+            Date of birth must be 8 characters minimum
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+    </mat-card>
+    <!-- Submit & Reset -->
+    <mat-card>
+      <div class="full-wrapper button-wrapper">
+        <div class="button-wrapper">
+          <button mat-flat-button color="warn">Submit</button>
+        </div>
+      </div>
+    </mat-card>
+  </form>
+</div>

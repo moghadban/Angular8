@@ -1,0 +1,28 @@
+{
+	"cols": [
+		"_id",
+		"first_name",
+		"last_name",
+		"phone",
+		"date",
+		"email"
+	],
+	"data": [
+		[	"5e2469470855w515fc3amjuy",
+			"Paul",
+			"Fredrick",
+			"456-987-1655",
+			"1975-01-23",
+			"paul@fred.com"
+		],
+		[
+			"hfh669470855w515fc38877d",
+			"David",
+			"Brown",
+			"985-667-7645",
+			"1972-11-02",
+			"d@b.com"
+		]
+		
+	]
+}

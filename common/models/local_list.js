@@ -1,0 +1,4 @@
+{
+  "name": "LocalList",
+  "base": "List"
+}

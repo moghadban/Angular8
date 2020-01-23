@@ -1,0 +1,45 @@
+{
+  "name": "List",
+  "plural": "/list",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+  "mongodb": {
+      "tableName": "Add"
+    },
+    "validateUpsert": false
+  },
+  "http": {
+    "path": "/list"
+  },
+  "properties": {
+    "_id": {
+      "type": "string",
+      "id": true
+    },
+    "first_name": {
+      "type": "string",
+      "required": false
+    },
+    "last_name": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": false
+    },
+    "dob": {
+      "type": "date",
+      "required": false
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

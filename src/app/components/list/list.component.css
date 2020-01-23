@@ -1,0 +1,22 @@
+.mat-cell
+{
+	font-size:16px !important;
+	 border-bottom: 1px solid #ccc;
+ border-top: 1px solid #ccc;
+}
+
+.mat-header-cell, .mat-paginator
+{
+	font-size:14px !important;
+}
+
+td.mat-cell:first-child {
+  /* row border */
+  border-left: 1px solid #ccc;
+}
+
+td.mat-cell:last-child {
+  /* row border */
+  border-right: 1px solid #ccc;
+}
+

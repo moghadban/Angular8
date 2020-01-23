@@ -1,0 +1,24 @@
+{
+  "remote": {
+    "host": "Cluster0-shard-0/cluster0-shard-00-02-zjkcy.gcp.mongodb.net:27017",
+    "port": 27017,
+    "url": "mongodb+srv://user_test:passadmin@cluster0-zjkcy.gcp.mongodb.net/test?retryWrites=true&w=majority",
+    "database": "moghadban",
+    "password": "passadmin",
+    "name": "remote",
+    "connector": "mongodb",
+    "user": "user_test",
+    "useNewUrlParser": true
+  },
+  "local": {
+    "host": "Cluster0-shard-0/cluster0-shard-00-02-zjkcy.gcp.mongodb.net:27017",
+    "port": 27017,
+    "url": "mongodb+srv://user_test:passadmin@cluster0-zjkcy.gcp.mongodb.net/test?retryWrites=true&w=majority",
+    "database": "moghadban",
+    "password": "passadmin",
+    "name": "local",
+    "connector": "mongodb",
+    "user": "user_test",
+    "useNewUrlParser": true
+  }
+}
