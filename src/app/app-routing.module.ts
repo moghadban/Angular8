@@ -6,7 +6,7 @@ import { ListEntryComponent } from './components/list/list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'add-entry' },
-  { path: '', component: AddEntryComponent },
+  { path: 'add-entry', component: AddEntryComponent },
   { path: 'edit-entry/:id', component: EditEntryComponent },
   { path: 'list', component: ListEntryComponent }
 ];
