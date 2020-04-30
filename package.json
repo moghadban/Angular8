@@ -34,7 +34,7 @@
     "express": "^4.17.1",
     "hammerjs": "^2.0.8",
     "helmet": "^3.10.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "loopback": "^3.22.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
