@@ -39,7 +39,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
     "loopback-connector-mongodb": "^4.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongodb": "^3.5.1",
     "mongodb-core": "^3.2.7",
     "rxjs": "^6.5.4",
